@@ -74,7 +74,7 @@ const Create = () => {
     }
     const deleteProduct = useMutation({
         mutationFn: (id: string) => {
-            return axios.delete(`https://676d57bd0e299dd2ddff3c52.mockapi.io/Product${id}`);
+            return axios.delete(`https://676d57bd0e299dd2ddff3c52.mockapi.io/Product/${id}`);
         },
         onSuccess: () => {
             queryClient.invalidateQueries({queryKey: ['products']});
